@@ -15,8 +15,13 @@ connectDb()
 
 //middleware
 // app.use(morgan('dev'))
+// app.use(cors({
+//     origin: 'https://e-shopping-u7am.onrender.com'
+//   }));
 app.use(cors({
-    origin: 'https://e-shopping-u7am.onrender.com'
+    origin: 'https://e-shopping-u7am.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
   }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, './client/dist')))
