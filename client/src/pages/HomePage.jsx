@@ -31,6 +31,7 @@ function HomePage() {
       );
       if (data.success) {
         setCategories(data.data);
+       
       } else {
         toast.error('Failed to get category list');
       }
@@ -44,19 +45,24 @@ function HomePage() {
     try {
       const { data } = await axios.get(
         `${import.meta.env.VITE_API_URL}/product/read-product?page=${currentPage}`
+       
       );
       if (data.success) {
+        
         setProducts(data.data);
         setTotalPages(data.totalPages);
+        
       }
     } catch (error) {
       console.error('Fetch Products Error:', error);
+
     }
   };
 
   useEffect(() => {
     categoryList();
-    fetchProducts(); // Fetch all products initially
+    fetchProducts(); 
+    console.log('API URL checking:', import.meta.env.VITE_API_URL );// Fetch all products initially
   }, [currentPage]);
 
   // Function to handle category selection
