@@ -1,0 +1,55 @@
+/* Container for the Forgot Password form */
+.forgot-password-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontally center the form */
+    align-items: center; /* Vertically center the form */
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    background-color: #b7bac9; /* Light background color for contrast */
+}
+
+/* Styling for the Forgot Password form */
+.forgot-password-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(36, 32, 32, 0.6), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(65, 40, 40, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.forgot-login{
+    color: #007bff; /* Bootstrap primary button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(62, 51, 51);
+    box-shadow: 0px 4px 10px rgba(65, 40, 40, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3
+}
+
+/* Styling for the form labels */
+.forgot-password-form .form-label {
+    font-weight: bold;
+    color: #f6f4f4; /* Light text color for labels */
+}
+
+/* Styling for the form inputs */
+.forgot-password-form .form-control {
+    border: 1px solid #ced4da; /* Border color for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+}
+
+/* Styling for the submit button */
+.forgot-password-form .btn-primary {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap primary button color */
+    border: none;
+    border-radius: 5px;
+}

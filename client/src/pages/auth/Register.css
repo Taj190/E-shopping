@@ -1,0 +1,44 @@
+/* Scoped CSS for the Register form */
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontally center the form */
+    align-items: center; /* Vertically center the form */
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    background-color: #b7bac9; /* Optional: Light background color for contrast */
+  }
+  
+  .register-form {
+   
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(36, 32, 32, 0.6), rgba(255, 255, 255, 0.05));
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 4px 10px rgba(65, 40, 40, 0.7);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  /* Optional: light border to enhance the glass effect */
+
+
+  
+  /* Additional styling to protect against class clashes */
+  .register-form .form-label {
+    font-weight: bold;
+    color: #f6f4f4;
+  }
+  
+  .register-form .form-control {
+    border: 1px solid #ced4da; /* Border color for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+  }
+  
+  .register-form .btn-primary {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap primary button color */
+    border: none;
+    border-radius: 5px;
+  }
+  

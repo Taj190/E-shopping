@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.open-sans{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .navbar{
+    font-family: "Open Sans", sans-serif;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-size: 17px;
+    box-shadow: 0 8px 6px -6px greenyellow;
+  }
+.active{
+    border-bottom: 2px solid black;
+}
+.navbar-brand{
+    letter-spacing: 3px;
+    font-family: "Raleway", sans-serif;
+    font-size: 25px;
+
+}
+.policy-page{
+  width: 98vw;
+}
+
+
+/*
+footer
+*/
+.footer {
+  color: white;
+  padding: 25px;
+  background: linear-gradient(
+    120deg,
+    #404040 25%,  /* Softer dark grey */
+    #8a9975 50%,  /* Muted olive green */
+    #404040 75%   /* Softer dark grey */
+  );
+  background-size: 200% 100%;
+  animation: backgroundWaveAnimation 15s ease-in-out infinite;
+}
+
+@keyframes backgroundWaveAnimation {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+
+
+
+.footer a {
+  text-decoration: none;
+  color: rgba(199, 152, 11, 0.819);
+  padding: 10px;
+}
+
+.footer a:hover {
+  color: #ffefba;
+  border-bottom: 1px solid #dfab00;
+}
+.links{
+  font-size: larger;
+}
+
+/*page not found */
+
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+  color: darkred;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: rgb(245, 6, 6);
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}

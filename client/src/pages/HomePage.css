@@ -1,0 +1,265 @@
+/* General styling */
+.container-fluid {
+    padding: 2rem;
+    width:95vw;
+   
+  }
+  /* Custom Checkbox Styling */
+.ant-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+    transition: color 0.2s ease;
+  }
+  
+  .ant-checkbox-inner {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid #107ad6;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Checkmark when checkbox is selected */
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  /* The actual checkmark (tick) */
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    transform: rotate(45deg) scale(1);
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Custom Radio Button Styling */
+  .ant-radio-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+    transition: color 0.2s ease;
+  }
+  
+  .ant-radio-inner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #6c757d;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .ant-radio-checked .ant-radio-inner {
+    
+    border-color: #007bff;
+  }
+  
+  .ant-radio-checked .ant-radio-inner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Filter Section Styling */
+  .col-md-2 {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .col-md-2:hover {
+    background: linear-gradient(135deg, #e2eaf6, #c9d9ec);
+  }
+  
+  /* Reset Button */
+  .col-md-2 .btn-dark {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    width: 100%;
+    font-weight: bold;
+    background-color: #343a40;
+  }
+  
+  .col-md-2 .btn-dark:hover {
+    background-color: #495057;
+  }
+  
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    .col-md-2 {
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+   
+  /* Product Section */
+  .card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Pagination Styling */
+  .pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive Styles for Mobile View */
+  @media (max-width: 768px) {
+    .col-md-2 {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .col-md-10 {
+      width: 100%;
+    }
+  
+    .card-img-top {
+      height: 200px;
+    }
+  
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .container-fluid {
+      padding: 1rem;
+    }
+  
+    .pagination {
+      flex-direction: column;
+    }
+  }
+  
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.6), rgba(0, 204, 255, 0.6)); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px; /* Increased perspective for a more pronounced 3D effect */
+  }
+  
+  .hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    animation: rotateCarousel 10s infinite linear; /* Continuous rotation */
+  }
+  
+  .hero-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust size as needed */
+    max-height: 400px; /* Adjust size as needed */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* Ensure images are layered correctly */
+    backface-visibility: hidden;
+    transform: rotateY(0deg) translateZ(300px); /* Position images in 3D space */
+  }
+  
+  .hero-reveal {
+    opacity: 1;
+  }
+  
+  .hero-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 100; /* Ensure text is above images */
+    padding: 0 1rem; /* Add some padding for better readability */
+    background: rgba(0, 0, 0, 0.5); /* Background to enhance text visibility */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Background color animation */
+  @keyframes backgroundAnimation {
+    0% {
+      background: linear-gradient(135deg, rgba(255, 0, 150, 0.6), rgba(0, 204, 255, 0.6));
+    }
+    100% {
+      background: linear-gradient(135deg, rgba(0, 204, 255, 0.6), rgba(255, 0, 150, 0.6));
+    }
+  }
+  
+  /* 3D rotation animation for carousel */
+  @keyframes rotateCarousel {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  

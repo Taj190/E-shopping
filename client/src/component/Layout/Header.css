@@ -1,0 +1,99 @@
+/* Navbar Container */
+.navbar {
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.7), rgba(255, 0, 150, 0.7));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Centering SearchInput */
+ 
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 1rem;
+  }
+  
+  .search-input-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Navbar Toggler */
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+  }
+  
+  .navbar-toggler-icon::before {
+    content: "\2630"; /* Unicode character for hamburger icon */
+    font-size: 24px;
+    color: #fff;
+    display: block;
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Dropdown */
+  .dropdown-menu {
+    background: rgba(0, 0, 0, 0.9);
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .dropdown-item {
+    color: #fff;
+  }
+  
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  
+  /* Cart Badge */
+  .ant-badge-count {
+    background-color: #ff4d4f;
+    color: #fff;
+  }
+  .brand-name{
+    display: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .navbar-toggler-icon {
+      background: url('data:image/svg+xml;base64,...') no-repeat center center;
+      width: 25px;
+      height: 25px;
+    }
+    .navbar-brand{
+      display: none;
+    }
+    .brand-name{
+      display: block;
+      color:bisque;
+      margin-bottom: 5px;
+    }
+  }
+  
